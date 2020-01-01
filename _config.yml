@@ -96,13 +96,6 @@ algolia:
   application_id: JCN8QLGTPZ
   search_only_api_key: ed4accc2f26915d91accd5fe480b6872
 
-cloudinary:
-  only_prod: true
-  cloud_name: avocado-dev
-  presets:
-    default:
-      max_width: 1080
-
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
@@ -110,4 +103,3 @@ plugins:
  - jekyll-archives
  - jekyll-algolia
  - jekyll-postfiles
- - jekyll-cloudinary

@@ -8,6 +8,6 @@
               <a href="{{ featured_post.url | relative_url }}" class="stretched-link">Continue reading</a>
             </div>
             <div class="h-md-250 overflow-hidden text-center w-md-180">
-              {% cloudinary {{featured_post.cover | absolute_url }} alt="{{ featured_post.title | escape }}" width="auto" height="250"%}
+              <img src="{{featured_post.cover | absolute_url }}" alt="{{ featured_post.title | escape }}" width="auto" height="250" />
             </div>
           </div>

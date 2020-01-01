@@ -20,7 +20,6 @@ group :jekyll_plugins do
   gem "jekyll-algolia", "~> 1.6"
   gem "jekyll-compose", "~> 0.11"
   gem "jekyll-postfiles", "~> 3.1"
-  gem "jekyll-cloudinary", "~> 1.14"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

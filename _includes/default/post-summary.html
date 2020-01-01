@@ -1,7 +1,7 @@
           {%- assign primary_category = post.categories[0] -%}
           <div class="media no-gutters border rounded overflow-hidden mb-4" style="background-color: #{{ post.cover_bg }}">
             <div class="h-md-200 overflow-hidden text-center w-md-150">
-              {% cloudinary {{post.cover | absolute_url }} alt="{{ post.title | escape }}" width="auto" height="200"%}
+              <img src="{{post.cover | absolute_url }}" alt="{{ post.title | escape }}" width="auto" height="200" />
             </div>
             <div class="media-body p-4 bg-light h-md-200">
               <h2 class="mt-0 blog-post-title">

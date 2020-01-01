@@ -6,7 +6,7 @@
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="/">
-          {% cloudinary {{ '/assets/images/logo.png' | relative_url }} alt="{{ site.title | escape }}" %}
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title | escape }}" />
         </a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">

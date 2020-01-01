@@ -7,5 +7,5 @@
               <div class="mb-1 text-muted">{{ featured_post.date | date: date_format }}{% if featured_post.author %} by <span class="p-author h-card" itemprop="name">{{ featured_post.author | escape }}</span>{% endif %}</div>
               <a href="{{ featured_post.url | relative_url }}" class="stretched-link">Continue reading</a>
             </div>
-            {% cloudinary {{featured_post.cover | absolute_url }} alt="{{ featured_post.title | escape }}" width="180" height="auto" class="rounded-circle align-self-center ml-2 mr-2" %}
+            <img src="{{featured_post.cover | absolute_url }}" alt="{{ featured_post.title | escape }}" width="180" height="auto" class="rounded-circle align-self-center ml-2 mr-2" />
           </div>
