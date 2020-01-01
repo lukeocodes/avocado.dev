@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{%- include search-hero.html -%}
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12 blog-main">
+
+      <div id="search-searchbar"></div>
+
+      <div class="post-list" id="search-hits">
+        <p>No results</p>
+      </div>
+  
+    </div><!-- /.blog-main -->
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+
+{%- include algolia.html -%}

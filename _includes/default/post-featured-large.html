@@ -1,0 +1,7 @@
+          {%- assign primary_category = featured_post.categories[0] -%}
+          {%- assign category_meta = site.avocado.known_categories[primary_category] -%}
+          <div class="jumbotron" style="background: url('{{ featured_post.cover | absolute_url }}') center center / cover no-repeat;">
+            <h1 class="display-4 {{featured_post.cover_bg}}">{{ featured_post.title | escape }}</h1>
+            <p class="{{featured_post.cover_bg}}">{{ featured_post.excerpt | strip_html }}</p>
+            <a href="{{ featured_post.url | relative_url }}" role="button">Continue reading</a>
+          </div>

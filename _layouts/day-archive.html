@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{%- assign date_format = site.avocado.date_format | default: "%b %-d, %Y" -%}
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        Archive of posts from {{ page.date | date: "%B %-d, %Y" }}
+      </h3>
+    
+      {%- for post in page.posts -%}
+        {%- include post-summary.html -%}
+      {%- endfor -%}
+
+    </div><!-- /.blog-main -->
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->

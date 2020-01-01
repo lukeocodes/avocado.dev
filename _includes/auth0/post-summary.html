@@ -1,0 +1,17 @@
+          {%- assign primary_category = post.categories[0] -%}
+          <div class="media no-gutters border rounded overflow-hidden mb-4" style="background-color: #{{ post.cover_bg }}">
+            {% cloudinary {{post.cover | absolute_url }} alt="{{ post.title | escape }}" width="150" height="auto" class="rounded-circle align-self-center ml-2 mr-2" %}
+            <div class="media-body p-4 bg-light h-md-200">
+              <h2 class="mt-0 blog-post-title">
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h2>
+              <p class="text-muted">{{ post.date | date: date_format }}{% if post.author %} by <span class="p-author h-card" itemprop="name">{{ post.author | escape }}</span>{% endif %}</p>
+                {%- if site.show_excerpts -%}
+                  <p>
+                    {{- post.excerpt -}}
+                  </p>
+                {%- endif -%}
+            </div>
+          </div>

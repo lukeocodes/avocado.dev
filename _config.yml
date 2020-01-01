@@ -1,0 +1,113 @@
+title: Content by Luke Oliff
+email: luke@lukeoliff.com
+description: >- # this means to ignore newlines until "baseurl:"
+  The content I've created since I've been working in Developer Relations and technical content roles.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: lukeocodes
+github_username:  lukeocodes
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+# avocado date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+avocado:
+  date_format: '%b %-d, %Y'
+
+  known_categories:
+    hackathon:
+      text_class: 'text-primary'
+      hero_image: '/assets/images/react.jpg'
+
+  # generate social links in footer
+  social_links:
+    twitter: jekyllrb
+    github:  jekyll
+    rss: rss
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+permalink: '/:title'
+
+paginate: 8
+paginate_path: '/page/:num'
+
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+  layouts:
+    year: year-archive
+    month: month-archive
+    day: day-archive
+    category: category-archive
+    tag: tag-archive
+
+algolia:                                                    
+  index_name: avocado.dev 
+  application_id: JCN8QLGTPZ
+  search_only_api_key: ed4accc2f26915d91accd5fe480b6872
+
+cloudinary:
+  only_prod: true
+  cloud_name: avocado-dev
+  presets:
+    default:
+      max_width: 1080
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-paginate
+ - jekyll-archives
+ - jekyll-algolia
+ - jekyll-postfiles
+ - jekyll-cloudinary

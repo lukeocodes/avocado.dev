@@ -1,0 +1,5 @@
+{%- if post.layout == 'auth0' -%}
+  {%- include auth0/post-summary.html -%}
+{%- else -%}
+  {%- include default/post-summary.html -%}
+{%- endif -%}

@@ -1,0 +1,5 @@
+          {%- assign primary_category = featured_post.categories[0] -%}
+          {%- assign category_meta = site.avocado.known_categories[primary_category] -%}
+          <div class="media no-gutters border rounded mb-4" style="background: url('{{ featured_post.cover | absolute_url }}') center center / cover no-repeat;">
+            <a class="media-body p-4 h-md-300" style="height: 500px" href="{{ featured_post.url | relative_url }}" ></a>
+          </div>

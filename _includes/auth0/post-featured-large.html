@@ -1,0 +1,16 @@
+          {%- assign primary_category = featured_post.categories[0] -%}
+          {%- assign category_meta = site.avocado.known_categories[primary_category] -%}
+          <div class="media no-gutters border rounded overflow-hidden mb-4" style="background-color: #{{ featured_post.cover_bg }}">
+            {% cloudinary {{featured_post.cover | absolute_url }} alt="{{ featured_post.title | escape }}" width="250" height="auto" class="rounded-circle align-self-center ml-2 mr-2" %}
+            <div class="media-body p-4 bg-light h-md-300">
+              <strong class="d-inline-block mb-2 {{ category_meta.text_class | default: 'text-black' }}">{{primary_category | default: 'Blog' | capitalize}}</strong>
+              <h2 class="mb-0">{{ featured_post.title | escape }}</h2>
+              <div class="mb-1 text-muted">{{ featured_post.date | date: date_format }}{% if featured_post.author %} by <span class="p-author h-card" itemprop="name">{{ featured_post.author | escape }}</span>{% endif %}</div>
+              {%- if site.show_excerpts -%}
+                <p>
+                  {{ featured_post.excerpt }}
+                </p>
+              {%- endif -%}
+              <a href="{{ featured_post.url | relative_url }}" class="stretched-link">Continue reading</a>
+            </div>
+          </div>

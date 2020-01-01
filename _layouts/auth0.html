@@ -1,0 +1,13 @@
+---
+layout: post
+---
+
+<div class="card float-right ml-3 no-gutters border rounded" style="background-color: #{{ page.cover_bg }}; width: 18rem;">
+  {% cloudinary {{page.cover | absolute_url }} alt="{{ featured_post.title | escape }}" class="rounded-circle align-self-center m-3" %}
+  <div class="card-body bg-light">
+    <p class="card-text">{{page.description}}</p>
+    <a href="{{page.canonical_url}}" class="card-link text-small">Read the original on Auth0.com</a>
+  </div>
+</div>
+
+{{content}}

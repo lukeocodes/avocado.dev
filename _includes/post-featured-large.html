@@ -1,0 +1,7 @@
+{%- if featured_post.layout == 'auth0' -%}
+  {%- include auth0/post-featured-large.html -%}
+{%- else if featured_post.layout == 'nexmo' -%}
+  {%- include nexmo/post-featured-large.html -%}
+{%- else -%}
+  {%- include default/post-featured-large.html -%}
+{%- endif -%}

@@ -1,0 +1,9 @@
+{%- assign category = page.title -%}
+{%- assign meta = site.avocado.known_categories[page.title] -%}
+<div class="container">
+  <div class="jumbotron p-4 p-md-5 {{meta.text_class | default: "text-white" }} rounded bg-dark" {% if meta.hero_image %}style="background: url('{{meta.hero_image}}') center center / cover no-repeat;"{% endif %}>
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">{{ category | escape | capitalize }} Posts</h1>
+    </div>
+  </div>
+</div>
